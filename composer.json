@@ -2,7 +2,7 @@
     "name": "breeze2/php-svn",
     "description": "svn lib in php",
     "type": "library",
-    "version": "0.0.1",
+    "version": "0.5.0",
     "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
