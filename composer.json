@@ -17,7 +17,9 @@
     },
     "autoload": {
         "psr-4": {
-            "BL\\LibSvn\\": "src/"
+            "BL\\LibSvn\\": "src/",
+            "BL\\LibSvn\\Traits\\": "src/traits",
+            "BL\\LibSvn\\Exceptions\\": "src/exceptions"
         }
     }
 }
