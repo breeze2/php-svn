@@ -1,5 +1,5 @@
 {
-    "name": "breeze/php-svn",
+    "name": "breeze2/php-svn",
     "description": "svn lib in php",
     "type": "library",
     "license": "MIT",
