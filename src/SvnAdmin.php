@@ -20,10 +20,11 @@ class SvnAdmin extends SvnBase
             throw new SvnException('Empty path parameter for "svnadmin create" command.');
         }
 
-        $pattern   = '/^([a-z0-9\_\-.]+)$/i';
+        // 目录名过滤特殊字符
+        $un_pattern   = '/[\'\"\?\*\|\/\\\\<>: ]+/'; // (\\\\) means (\)
         $repo_name = basename($path);
-
-        if (!preg_match($pattern, $repo_name)) {
+        // 不影响中文目录
+        if (preg_match($un_pattern, $repo_name)) {
             throw new SvnException('Invalid repository name: ' . $repo_name . '');
         }
 

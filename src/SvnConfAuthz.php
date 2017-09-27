@@ -382,6 +382,7 @@ class SvnConfAuthz
         }
 
         // Validate the $repopath string.
+        // 不影响中文目录
         $pattern = '/^[A-Za-z0-9\_\-.]+:\/.*$/i';
         if ($repopath != "/" && !preg_match($pattern, $repopath)) {
             throw new SvnException('Invalid repository name. (Pattern: ' . $pattern . ')');
@@ -432,6 +433,7 @@ class SvnConfAuthz
     public function createGroup($groupname)
     {
         // Validate the groupname.
+        // 组名正则
         $pattern = '/^[A-Za-z0-9\-\_]+$/i';
         if (!preg_match($pattern, $groupname)) {
             throw new SvnException('Invalid group name "' . $groupname .

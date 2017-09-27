@@ -40,7 +40,9 @@ trait SvnEncode
         }
 
         // Automatic prepend the 'file://' prefix (if nothing else is given).
-        if (preg_match('/^[a-z0-9+]+:\/\//i', $uri) == 0) {
+        // 不影响中文目录
+        $pattern = '/^[a-z0-9+]+:\/\//i';
+        if (preg_match($pattern, $uri) == 0) {
             if (strpos($uri, '/') === 0) {
                 $uri = 'file://' . $uri;
             } else {
