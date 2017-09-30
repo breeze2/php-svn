@@ -96,7 +96,7 @@ try {
     // save the changes of svn auth
     $authz->save();
 
-} catch (SvnException e) {
+} catch (SvnException $e) {
     echo $e->getOutput();
 }
 
