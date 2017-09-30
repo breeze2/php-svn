@@ -105,7 +105,7 @@ try {
 ## API
 
 ```php
-<?php
+
 SvnAdmin::create(string $svn_repo_path, [array $option]);
 SvnClient::mkdir(string $svn_repo_path_dir, [array $option]);
 SvnClient::mkdir(array $svn_repo_path_dirs, [array $option]);
